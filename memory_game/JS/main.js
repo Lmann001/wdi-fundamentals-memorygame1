@@ -9,7 +9,7 @@ var cards = [
   {
   rank: "queen",
   suit: "hearts",
-  cardImage: "memory-game/images/queen-of-hearts.png"
+  cardImage: "memory-game/images/queen-of-hearts.png",
   },
   {
   rank: "queen",
@@ -54,7 +54,7 @@ var flipCard = function(){
 }
 
 //reorganised from my last submission as my code wasnt working correctly.
-
+// not seeing cards images or suits will try to reverse engineer fron next step 
 
 
 
