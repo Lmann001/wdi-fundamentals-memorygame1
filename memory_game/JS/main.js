@@ -28,8 +28,6 @@ var cards = [
   }
 ];
 
-var cardsInPlay = [];
-
 
 var cardsInPlay = [];
 
@@ -53,8 +51,20 @@ var flipCard = function(){
 	checkForMatch();
 }
 
-//reorganised from my last submission as my code wasnt working correctly.
-// not seeing cards images or suits will try to reverse engineer fron next step 
+var createBoard = function() {
+	for (let i = 0; i < cards.length; i++){
+		let cardElement = document.createElement('img');
+		cardElement.setAttribute('src', "images/back.png");
+		cardElement.setAttribute('data-id', i);
+		cardElement.addEventListener('click', flipCard);
+		document.getElementById('game-board').appendChild(cardElement);
+	}
+}
+
+
+
+// reorganised from my last submission as my code wasnt working correctly.
+// not seeing cards images or suits will try to reverse engineer fron next step.
 
 
 
