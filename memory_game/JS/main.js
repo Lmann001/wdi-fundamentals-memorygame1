@@ -1,25 +1,64 @@
-console.log("Up and Running!");
-var cards = ["queen", "queen", "king", "king"]
-var cardsInPlay = []
-var cardOne = cards[0]
-cardsInPlay.push('cardOne');
-console.log("User flipped " + cardOne);
-var cardTwo = cards[1]
-cardsInPlay.push('cardTwo');
-console.log("User Flipped King!");
-if (cardsInPlay length === 2) {
- cardsInPlay[0] === cardsInPlay[1];
- alert("You Found a Match!");
+console.log("Up and running");
+console.log("User flipped King")
+console.log("User flipped Queen")
+console.log("Sorry, Try Again.")
+
+
+// var cards = ["queen","queen","king","king"];
+var cards = [
+  {
+  rank: "queen",
+  suit: "hearts",
+  cardImage: "memory-game/images/queen-of-hearts.png"
+  },
+  {
+  rank: "queen",
+  suit: "diamonds",
+  cardImage: "memory-game/images/queen-of-diamonds.png"
+  },
+  {
+  rank: "king",
+  suit: "hearts",
+  cardImage: "memory-game/images/king-of-hearts.png"
+  },
+  {
+  rank: "king",
+  suit: "diamonds",
+  cardImage: "memory-game/images/king-of-diamonds.png"
+  }
+];
+
+var cardsInPlay = [];
+
+
+var cardsInPlay = [];
+
+	var checkForMatch = function() {
+		if (cardsInPlay.length === 2) {
+			if (cardsInPlay[0] === cardsInPlay[1] || cardsInPlay [2] === cardsInPlay[3]) {
+			alert("You found a match!");
+		} 	else {
+			alert("Sorry, Try Again.");
+		}
+	}
 }
-else (cardsInPlay[0] != cardsInPlay[1]{
-	alert("Sorry, Try Again");
+
+var flipCard = function(){
+	var cardId = this.getAttribute('data-id')
+	this.setAttribute('src', cards[cardId].cardImage)
+	console.log("User flipped " + cards[cardId].rank);
+	cardsInPlay.push(cards[cardId].rank);
+	console.log(cards[cardId].cardImage);
+	console.log(cards[cardId].suit);
+	checkForMatch();
 }
 
+//reorganised from my last submission as my code wasnt working correctly.
 
 
 
-//This is not working how it should,
-// I think Im really close but cant figure it out.
+
+
 
 
 // Notations to help me with syntax//
